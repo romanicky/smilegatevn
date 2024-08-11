@@ -1,17 +1,27 @@
 import { style } from '@vanilla-extract/css';
 
+export const mainTitle = style({
+  display: 'flex',
+  marginTop: '5rem',
+  marginLeft: '1.25rem',
+  fontWeight: 'bold',
+  fontSize: '1.5rem'
+})
+
 export const photoGrid = style({
   display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-  gap: '20px',
-  padding: '20px',
+  gridTemplateColumns: 'repeat(auto-fill, minmax(12.5rem, 1fr))',
+  gap: '1.25rem',
+  padding: '1.25rem',
   justifyItems: 'center',
+
   '@media': {
-    'screen and (max-width: 600px)': {
-      gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', // More columns on smaller screens
+    '(min-width: 30rem) and (max-width: 60rem)': {
+      gridTemplateColumns: 'repeat(auto-fill, minmax(9.375rem, 1fr))',
     },
-    'screen and (min-width: 1200px)': {
-      gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', // Fewer columns on larger screens
+    '(min-width: 60rem)': {
+      gridTemplateColumns: 'repeat(auto-fill, minmax(15.625rem, 1fr))',
     },
   },
 });
+

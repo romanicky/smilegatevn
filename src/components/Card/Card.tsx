@@ -1,13 +1,13 @@
 import React from 'react';
 import * as styles from './Card.css';
 
-interface CardProps {
+export interface CardData {
   imageSrc: string;
   title: string;
   type: number;
 }
 
-export const Card: React.FC<CardProps> = ({ imageSrc, title, type }) => {
+export const Card: React.FC<CardData> = ({ imageSrc, title, type }) => {
   return (
     <div className={styles.card}>
       <div className={styles.cardImageContainer}>

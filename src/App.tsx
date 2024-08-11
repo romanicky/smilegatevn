@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import TopMenu from './components/TopMenu/TopMenu';
 import PhotoGrid from './components/PhotoGrid/PhotoGrid';
-
-const initialCards: CardData[] = [
-  // Your initial cards data
-];
+import { CardData } from './components/Card/Card';
+import initialCards from './mock-data/cards.json'
 
 const App: React.FC = () => {
-  const [cards, setCards] = useState<CardData[]>(initialCards);
+  const [cards] = useState<CardData[]>(initialCards);
   const [typeFilter, setTypeFilter] = useState<number | null>(null);
 
   const filteredCards =
@@ -17,7 +15,7 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <TopMenu setTypeFilter={setTypeFilter} />
+      <TopMenu setTypeFilter={setTypeFilter} activeType={typeFilter} />
       <PhotoGrid cards={filteredCards} />
     </div>
   );

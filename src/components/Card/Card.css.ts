@@ -4,10 +4,10 @@ export const card = style({
   display: 'flex',
   flexDirection: 'column',
   width: '100%',
-  border: '1px solid #ccc',
-  borderRadius: '8px',
+  border: '0.063rem solid #ccc',
+  borderRadius: '0.5rem',
   overflow: 'hidden',
-  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
+  boxShadow: '0 0.125 0.5rem rgba(0, 0, 0, 0.1)',
   backgroundColor: '#fff',
   textAlign: 'center',
 });
@@ -15,7 +15,7 @@ export const card = style({
 export const cardImageContainer = style({
   width: '100%',
   position: 'relative',
-  paddingTop: '66.67%', // 3:2 aspect ratio (height is 2/3 of the width)
+  paddingTop: '66.67%',
   overflow: 'hidden',
 });
 
@@ -29,9 +29,9 @@ export const cardImage = style({
 });
 
 export const cardTitle = style({
-  padding: '10px',
+  padding: '0.625rem',
   margin: '0',
-  fontSize: '14px',
+  fontSize: '1rem',
   fontWeight: 'bold',
   whiteSpace: 'nowrap',
   overflow: 'hidden',
